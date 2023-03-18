@@ -1,12 +1,12 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-  </head>
-  <body>
-    <div class="container">
-      {{ content }}
-    </div>
-  </body>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">
+  <title>{{ page.title }}</title>
+</head>
+<body class="homepage-welcome">
+  <header>{% include header.html %}</header>
+  <main>{{ content }}</main>
+  <footer>{% include footer.html %}</footer>
+</body>
 </html>
