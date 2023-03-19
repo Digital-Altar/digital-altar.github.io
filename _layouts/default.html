@@ -2,11 +2,19 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
-  <title>{{ page.title }}</title>
+  {% if page.url == '/' %}
+    <title>Digital Altar </title>
+  {% else %}
+    <title>{{ page.title }} - Digital Altar</title>
+  {% endif %}
 </head>
-<body class="homepage-welcome">
-  <header>{% include header.html %}</header>
-  <main>{{ content }}</main>
-  <footer>{% include footer.html %}</footer>
+<body class="welcome">
+  <div class="wrapper">
+    <header>{% include header.html %}</header>
+    <main>{{ content }}</main>
+    <footer>{% include footer.html %}</footer>
+  </div>
+
+<script src="{{ '/assets/js/footer.js' | relative_url }}"></script>
 </body>
 </html>
