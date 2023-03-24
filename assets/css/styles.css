@@ -443,22 +443,22 @@ header {
   overflow: hidden;
 }
 h1 {
-  font-size: 4em;
+  font-size: 400%;
 }
 h1::first-letter {
   font-family: 'Old English Five';
   margin: 10px auto auto auto;
 }
 h2 {
-  font-size: 3em;
+  font-size: 300%;
   margin: 10px auto auto auto;
 }
 h3 {
-  font-size: 2em;
+  font-size: 200%;
   margin: 10px auto auto auto;
 }
 p {
-  font-size: 1em;
+  font-size: 100%;
   margin: 10px auto auto auto;
 }
 .logo {
@@ -503,8 +503,6 @@ ul.navigation li a {
   text-decoration: none;
   margin: 0 5px;
   letter-spacing: 1px;
-  font-weight: lighter;
-  font-size: 16px;
 }
 ul.navigation li a:hover {
   color: white;
@@ -517,7 +515,7 @@ main {
   padding: 20px;
 }
 .content {
-  background: linear-gradient(120deg, rgba(183,45,253,.5) 5%, rgba(248,58,207,.5) 15%, rgba(34,193,195,.5) 91%);
+  background: linear-gradient(120deg, rgba(183,45,253,.7) 5%, rgba(248,58,207,.7) 15%, rgba(34,193,195,.7) 91%);
   padding: 20px;
   margin: 30px auto;
   max-width: 1000px;
