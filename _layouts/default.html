@@ -2,6 +2,10 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap" rel="stylesheet">
+
   {% if page.url == '/' %}
     <title>Digital Altar </title>
   {% else %}
@@ -11,7 +15,13 @@
 <body class="welcome">
   <div class="wrapper">
     <header>{% include header.html %}</header>
-    <main>{{ content }}</main>
+    <main>
+      {% if page.content != '' %}
+        <section class="content">
+          {{ content }}
+        </section>
+      {% endif %}
+    </main>
     <footer>{% include footer.html %}</footer>
   </div>
 

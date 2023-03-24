@@ -427,18 +427,39 @@ Here's where we begin the styling
 
 /* The Meat */
 body {
+  font-size: 18px;
 	margin: 0;
 	padding: 0;
 	background: #000000;
 	color: #CCCCCC;
 	background: rgb(183,45,253);
-	background: linear-gradient(121deg, rgba(183,45,253,1) 5%, rgba(248,58,207,1) 15%, rgba(34,193,195,1) 91%);
+	background: linear-gradient(120deg, rgba(183,45,253,1) 5%, rgba(248,58,207,1) 15%, rgba(34,193,195,1) 91%);
+  font-family: 'Inconsolata', monospace;
 }
 .wrapper {
 }
 header {
   background: black;
   overflow: hidden;
+}
+h1 {
+  font-size: 4em;
+}
+h1::first-letter {
+  font-family: 'Old English Five';
+  margin: 10px auto auto auto;
+}
+h2 {
+  font-size: 3em;
+  margin: 10px auto auto auto;
+}
+h3 {
+  font-size: 2em;
+  margin: 10px auto auto auto;
+}
+p {
+  font-size: 1em;
+  margin: 10px auto auto auto;
 }
 .logo {
   font-family: 'Old English Five';
@@ -483,18 +504,30 @@ ul.navigation li a {
   margin: 0 5px;
   letter-spacing: 1px;
   font-weight: lighter;
+  font-size: 16px;
 }
 ul.navigation li a:hover {
   color: white;
   text-decoration: underline;
 }
 main {
-  background: url('../images/digitalaltar-background.png') top;
-  background-size: cover;
   height: 100%;
+  background: url('../images/digitalaltar-background.png') top center;
+  background-size: cover;
+  padding: 20px;
+}
+.content {
+  background: linear-gradient(120deg, rgba(183,45,253,.5) 5%, rgba(248,58,207,.5) 15%, rgba(34,193,195,.5) 91%);
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 1000px;
+  color: black;
 }
 footer {
-  padding: 30px;
+  padding: 20px;
   text-align: right;
   color: black;
+  width: 100%;
+  font-size: small;
+  letter-spacing: 1px;
 }
