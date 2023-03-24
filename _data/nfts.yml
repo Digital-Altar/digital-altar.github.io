@@ -1,0 +1,17 @@
+# nfts.yml
+
+- name: Floral Candy
+  image_url: /assets/images/floral-candy.jpg
+  alt_text: Floral Candy by Flower Blocks
+  token_id: 18
+  contract_address: "0xd7a818d1fda26550ac0dd4f0620ec6c4ea60a239"
+  description: "Please take a piece of Floral Candy.<br><br>For me, creating these works is a deeply personal and therapeutic practice. In the midst of my struggles with anxiety, immersing myself in the process of collecting and arranging these fleeting blooms has brought me solace and peace of mind. Each petal and stem represents a small victory over my own internal turmoil and serves as a reminder that even in the darkest moments, there is always a glimmer of hope and resilience."
+  buy_link: https://www.manifold.xyz
+
+- name: My NFT 2
+  image_url: /assets/images/floral-candy.jpg
+  alt_text: Floral Candy by Flower Blocks
+  token_id: 789012
+  contract_address: "0x456def"
+  description: "Description here."
+  buy_link: https://www.manifold.xyz

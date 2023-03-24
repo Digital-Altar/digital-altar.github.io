@@ -422,6 +422,7 @@ Here's where we begin the styling
 @font-face {
   font-family: 'Old English Five';
   src: url('OldEnglishFive.ttf') format('truetype');
+  font-display: swap;
 }
 
 /* The Meat */
@@ -434,70 +435,66 @@ body {
 	background: linear-gradient(121deg, rgba(183,45,253,1) 5%, rgba(248,58,207,1) 15%, rgba(34,193,195,1) 91%);
 }
 .wrapper {
-	background: url('../images/digitalaltar-background.png') top;
-	background-size: cover;
-	height: 100%;
-	background-attachment: fixed;
+}
+header {
+  background: black;
+  overflow: hidden;
 }
 .logo {
-	font-family: 'Old English Five';
-	text-align: center;
-	color: rgb(255,255,255,.6);
-	font-size: 13vw;
-	width: 100%;
-	padding: 1vw;
-	z-index: 1;
-	position: relative;
+  font-family: 'Old English Five';
+  color: rgb(255,255,255,.6);
+  font-size: 6vh;
+  padding: 1vw 2vw 2vw 2vw;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
 }
 .logo a { 
-	color: rgba(255,255,255,.5); 
-	text-decoration: none; 
+  color: rgba(255,255,255,.5); 
+  text-decoration: none; 
     -webkit-transition: color 1s; /* For Safari 3.0 to 6.0 */
     transition: color 1s;
  }
 .logo a:hover { 
-	color: rgba(255,255,255,1); 
+  color: rgba(255,255,255,1); 
 }
 nav {
-	background: rgba(0,0,0,.3);
-	margin: 50px auto;
+  text-align: center;
+  padding: 20px;
+  display: inline-block;
 }
 ul.navigation {
-	list-style: none;
-	margin: 0 auto;
-	padding: 20px 30px;
-	max-width: 90%;
+  list-style: none;
+  margin: 0 auto;
 }
 ul.navigation li {
-	line-height: 1.5em;
-	display: inline-block;
-	font-size: 1.25em;
+  display: inline-block;
 }
 ul.navigation li::after {
-	content: ' | ';
-	letter-spacing: 5px;
-	color: black;
-	font-weight: bolder;
+  content: ' | ';
+  color: gray;
 }
 ul.navigation li:last-of-type::after {
-	content: none;
+  content: none;
 }
 ul.navigation li a {
-	color: white;
-	text-decoration: none;
+  color: white;
+  text-decoration: none;
+  margin: 0 5px;
+  letter-spacing: 1px;
+  font-weight: lighter;
 }
 ul.navigation li a:hover {
-	color: white;
-	text-decoration: underline;
-	border-bottom: solid 2px hotpink;
+  color: white;
+  text-decoration: underline;
 }
 main {
-	max-width: 90%;
-	margin: 0 auto;
+  background: url('../images/digitalaltar-background.png') top;
+  background-size: cover;
+  height: 100%;
 }
 footer {
-	padding: 20px;
-	text-align: right;
-	width: 100%;
-	font-weight: bold;
+  padding: 30px;
+  text-align: right;
+  color: black;
 }

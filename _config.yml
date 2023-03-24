@@ -23,14 +23,14 @@ email: moon@digitalaltar.com
 description: >- # this means to ignore newlines until "baseurl:"
   Digital Altar: a(n in)conspicious repository.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://digitalaltar.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: digital_altar
 github_username:  digitalaltar
 
 # Build settings
 plugins:
   - jekyll-feed
-
+  
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
@@ -50,3 +50,5 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+plugins_dir: ./vendor/bundle
