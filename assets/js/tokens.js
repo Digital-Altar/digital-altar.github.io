@@ -1,8 +1,8 @@
 function tezosTokens() {
-  // Loop through each token and output a div for each one
-  tezos.forEach(token => {
-    // Query the API to get token data
-    axios.get(`https://api.tzkt.io/v1/tokens?contract=${token.address}&offset=${token.tokenId}&limit=1`)
+  // Create an array of promises for each token
+  const promises = tezos.map(token => {
+    // Query the API to get token data and return the promise
+    return axios.get(`https://api.tzkt.io/v1/tokens?contract=${token.address}&offset=${token.tokenId}&limit=1`)
       .then(response => {
         // Get data for the token
         const tokenData = response.data[0];
@@ -38,13 +38,16 @@ function tezosTokens() {
         console.log(error);
       });
   });
+
+  // Return a promise that resolves when all promises in the array have resolved
+  return Promise.all(promises);
 }
 
 function ethTokens() {
-  // Loop through each token and output a div for each one
-  eth.forEach(token => {
-    // Query the LooksRare API to get token data
-    axios.get(`https://api.looksrare.org/api/v1/tokens?collection=${token.address}&tokenId=${token.tokenId}`)
+  // Create an array of promises for each token
+  const promises = eth.map(token => {
+    // Query the LooksRare API to get token data and return the promise
+    return axios.get(`https://api.looksrare.org/api/v1/tokens?collection=${token.address}&tokenId=${token.tokenId}`)
       .then(response => {
         // Get data for the token
         const tokenData = response.data;
@@ -74,9 +77,14 @@ function ethTokens() {
         console.log(error);
       });
   });
+
+  // Return a promise that resolves when all promises in the array have resolved
+  return Promise.all(promises);
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
-  tezosTokens();
-  ethTokens();
+  // Call tezosTokens() and wait for it to complete before calling ethTokens()
+  tezosTokens().then(() => {
+    ethTokens();
+  });
 });
