@@ -22,16 +22,16 @@ function loadTokens() {
 
         // Create HTML for image and name
         const html = `
-          <div class="nft">
+          <div class="nft tezos">
             <a href="${linkUrl}">
               <img src="${imageUrl}" alt="${name}" />
-              <p>${name}</p>
+              <p><span>${name}</span></p>
             </a>
           </div>
         `;
 
         // Add HTML to token-data div
-        const tokenDataDiv = document.getElementById('tezos');
+        const tokenDataDiv = document.getElementById('collection');
         tokenDataDiv.innerHTML += html;
       })
       .catch(error => {

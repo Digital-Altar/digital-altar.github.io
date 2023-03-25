@@ -10,9 +10,9 @@
   {% if page.url contains "/collection" %}{% assign collection = true %}{% endif %}
 
   {% if home %}
-    <title>Digital Altar </title>
+    <title>{{ site.title }}</title>
   {% else %}
-    <title>{{ page.title }} - Digital Altar</title>
+    <title>{{ page.title }} - {{ site.title }}</title>
   {% endif %}
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -27,16 +27,14 @@
         </section>
       {% endif %}
       {% if collection %}
-        <section class="collection">
-          <div id="tezos"></div>
-          <div id="ethereum"></div>
+        <section id="collection">
         </section>
       {% endif %}
     </main>
     <footer>{% include footer.html %}</footer>
   </div>
 
-{% assign tezoslist = site.data.tezos %}
+{% assign tezoslist = site.data.tezos | sort_order: natural %}
   <script>
     const tokens = [
     {% for token in tezoslist %}
