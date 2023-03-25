@@ -34,17 +34,24 @@
     <footer>{% include footer.html %}</footer>
   </div>
 
-{% assign tezoslist = site.data.tezos | sort_order: natural %}
-  <script>
-    const tokens = [
-    {% for token in tezoslist %}
-        {
-          address: '{{ token.contract_address }}',
-          tokenId: {{ token.token_id }}
-        }{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-    ];
-  </script>
-<script src="{{ '/assets/js/tezos.js' | relative_url }}"></script>
+
+  {% if collection %}
+    {% assign tezoslist = site.data.tezos | sort: 'sequence' %}
+    {% assign ethlist = site.data.ethereum | sort: 'sequence' %}
+    <script>
+      const tezos = [
+      {% for token in tezoslist %}
+          { address: '{{ token.contract_address }}', tokenId: {{ token.token_id }}}{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+      ];
+
+      const eth = [
+      {% for token in ethlist %}
+          { address: '{{ token.contract_address }}', tokenId: {{ token.token_id }}}{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+      ];
+    </script>
+    <script src="{{ '/assets/js/tokens.js' | relative_url }}"></script>
+  {% endif %}
 </body>
 </html>

@@ -1,0 +1,45 @@
+# Ethereum NFTs Collection List
+# Enter like so:
+#- sequence: 1 // the sort order 
+#  contract_address: 'KT1Ck7qwHdFwonXn6PXUcRbzQvg7duqXY3rh' // the contract address
+#  token_id: 0 // the token id
+
+- sequence: 1
+  contract_address: '0x8bC416Db54E238596A1533c80933f5473dfB292d'
+  token_id: 2
+
+- sequence: 2
+  contract_address: '0x821d92ECd3b6e47613154178E786bC416518dC80'
+  token_id: 2
+
+- sequence: 3
+  contract_address: '0xFF04d2CebacC41039c026F7fA24E2c47fb4CE9F4'
+  token_id: 1
+  
+- sequence: 4
+  contract_address: '0xb01a7EFB9A31299c6aD00b44bBc6FF6E76b661ac'
+  token_id: 2
+
+- sequence: 5
+  contract_address: '0x06c8bB145b5796557b69758F6f7Be45D245De9dD'
+  token_id: 1
+
+- sequence: 6
+  contract_address: '0xD7a818d1FdA26550ac0Dd4f0620ec6C4ea60A239'
+  token_id: 18
+
+- sequence: 7
+  contract_address: '0x23ad5a72Bd46DfC5cba53b42BBB52725bAa40d25'
+  token_id: 69
+
+- sequence: 8
+  contract_address: '0x0eA4b0E97f5d11a54Cf31daBE131eDfeEEd8Ff3A'
+  token_id: 22
+
+- sequence: 9
+  contract_address: '0xFF04d2CebacC41039c026F7fA24E2c47fb4CE9F4'
+  token_id: 2
+
+- sequence: 10
+  contract_address: '0xB2A088A0D746125668d171E69d43ABf2627e66a9'
+  token_id: 38

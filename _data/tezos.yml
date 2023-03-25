@@ -1,19 +1,25 @@
 # Tezos NFTs Collection List
 # Enter like so:
-#- contract_address: 'KT1Ck7qwHdFwonXn6PXUcRbzQvg7duqXY3rh'
-#- token_id: 0
+#- sequence: 1 // the sort order 
+#  contract_address: 'KT1Ck7qwHdFwonXn6PXUcRbzQvg7duqXY3rh' // the contract address
+#  token_id: 0 // the token id
 
-- contract_address: 'KT1Ck7qwHdFwonXn6PXUcRbzQvg7duqXY3rh'
+- sequence: 1
+  contract_address: 'KT1Ck7qwHdFwonXn6PXUcRbzQvg7duqXY3rh'
   token_id: 0
 
-- contract_address: 'KT1CyhuiRDdUzfCXvzveQcTyqADpw1t8JUQs'
+- sequence: 2
+  contract_address: 'KT1CyhuiRDdUzfCXvzveQcTyqADpw1t8JUQs'
   token_id: 7
 
-- contract_address: 'KT1LjmAdYQCLBjwv4S2oFkEzyHVkomAf5MrW'
+- sequence: 3
+  contract_address: 'KT1LjmAdYQCLBjwv4S2oFkEzyHVkomAf5MrW'
   token_id: 18558
-
-- contract_address: 'KT1WPHHmmtzS9UmyHZ981Ezh9Hs2pd5D2p2F'
+  
+- sequence: 4
+  contract_address: 'KT1WPHHmmtzS9UmyHZ981Ezh9Hs2pd5D2p2F'
   token_id: 1
 
-- contract_address: 'KT1WPHHmmtzS9UmyHZ981Ezh9Hs2pd5D2p2F'
+- sequence: 5
+  contract_address: 'KT1WPHHmmtzS9UmyHZ981Ezh9Hs2pd5D2p2F'
   token_id: 0

@@ -519,6 +519,7 @@ main {
   padding: 20px;
   clear: both;
   overflow: hidden;
+  background-attachment: fixed;
 }
 main.home {
   height: 100%;
@@ -546,6 +547,7 @@ main.home {
 }
 .nft img {
   width: auto;
+  height: auto;
   max-height: 400px;
   max-width: 100%;
 }
