@@ -514,10 +514,13 @@ ul.navigation li a:hover {
   text-decoration: underline;
 }
 main {
-  height: 100%;
   background: url('../images/digitalaltar-background.png') top center;
-  background-size: cover;
+  background-size: fit;
   padding: 20px;
+  clear: both;
+}
+main.home {
+  height: 100%;
 }
 .content {
   background: linear-gradient(120deg, rgba(183,45,253,.5) 5%, rgba(248,58,207,.5) 15%, rgba(34,193,195,.5) 91%);
@@ -525,6 +528,27 @@ main {
   margin: 30px auto;
   max-width: 1000px;
   color: black;
+  clear: both;
+}
+.collection {
+  column-count: 4 !important;
+  column-gap: 0;
+  clear: both;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+.tezos {
+}
+.nft {
+  width: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+.nft img {
+  width: auto;
+  max-height: 400px;
+  max-width: 100%;
+  padding: 10px 10px 0px 10px;
 }
 footer {
   padding: 20px;

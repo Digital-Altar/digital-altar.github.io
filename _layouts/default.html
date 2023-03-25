@@ -6,25 +6,47 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400&display=swap" rel="stylesheet">
 
-  {% if page.url == '/' %}
+  {% if page.url == '/' %}{% assign home = true %}{% endif %}
+  {% if page.url contains "/collection" %}{% assign collection = true %}{% endif %}
+
+  {% if home %}
     <title>Digital Altar </title>
   {% else %}
     <title>{{ page.title }} - Digital Altar</title>
   {% endif %}
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body class="welcome">
   <div class="wrapper">
     <header>{% include header.html %}</header>
-    <main>
+    <main {% if home %}class="home"{% endif %}>
       {% if page.content != '' %}
         <section class="content">
           {{ content }}
+        </section>
+      {% endif %}
+      {% if collection %}
+        <section class="collection">
+          <div id="tezos"></div>
+          <div id="ethereum"></div>
         </section>
       {% endif %}
     </main>
     <footer>{% include footer.html %}</footer>
   </div>
 
-<script src="{{ '/assets/js/footer.js' | relative_url }}"></script>
+{% assign tezoslist = site.data.tezos %}
+  <script>
+    const tokens = [
+    {% for token in tezoslist %}
+        {
+          address: '{{ token.contract_address }}',
+          tokenId: {{ token.token_id }}
+        }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+    ];
+  </script>
+<script src="{{ '/assets/js/tezos.js' | relative_url }}"></script>
 </body>
 </html>
