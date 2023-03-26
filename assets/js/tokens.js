@@ -185,3 +185,16 @@ document.addEventListener("DOMContentLoaded", async function(event) {
     observeImages();
   }
 });
+
+const collectionInner = document.getElementById('collection');
+const leftArrow = document.getElementById('left-arrow');
+const rightArrow = document.getElementById('right-arrow');
+const scrollStep = 200;
+
+leftArrow.addEventListener('click', () => {
+  collectionInner.scrollLeft -= scrollStep;
+});
+
+rightArrow.addEventListener('click', () => {
+  collectionInner.scrollLeft += scrollStep;
+});
