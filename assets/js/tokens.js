@@ -1,3 +1,21 @@
+function fetchWithRetry(url, retryCount = 3) {
+  return new Promise((resolve, reject) => {
+    const request = () => {
+      axios.get(url)
+        .then(response => resolve(response))
+        .catch(error => {
+          if (retryCount === 0) {
+            reject(error);
+          } else {
+            retryCount--;
+            setTimeout(request, 1000);
+          }
+        });
+    };
+    request();
+  });
+}
+
 function tezosTokens() {
   // Create an array of promises for each token
   const promises = tezos.map(token => {
@@ -143,58 +161,8 @@ function ethTokens() {
   return Promise.all(promises);
 }
 
-function supportsLazyLoading() {
-  return 'loading' in HTMLImageElement.prototype;
-}
-
-function lazyLoadImages(images) {
-  images.forEach(img => {
-    img.src = img.dataset.src;
-    img.onload = () => {
-      img.removeAttribute('data-src');
-    };
-  });
-}
-
-function observeImages() {
-  const images = document.querySelectorAll('img[data-src]');
-  lazyLoadImages(images);
-
-  const observer = new MutationObserver(mutationsList => {
-    for (const mutation of mutationsList) {
-      if (mutation.type === 'childList') {
-        const addedImages = mutation.addedNodes
-          ? Array.from(mutation.addedNodes).filter(node => node.nodeName === 'IMG')
-          : [];
-        if (addedImages.length) {
-          lazyLoadImages(addedImages);
-        }
-      }
-    }
-  });
-
-  observer.observe(document.body, { childList: true, subtree: true });
-}
-
 document.addEventListener("DOMContentLoaded", async function(event) {
   // Call tezosTokens() and wait for it to complete before calling ethTokens()
   await tezosTokens();
   await ethTokens();
-
-  if (supportsLazyLoading()) {
-    observeImages();
-  }
-});
-
-const collectionInner = document.getElementById('collection');
-const leftArrow = document.getElementById('left-arrow');
-const rightArrow = document.getElementById('right-arrow');
-const scrollStep = 200;
-
-leftArrow.addEventListener('click', () => {
-  collectionInner.scrollLeft -= scrollStep;
-});
-
-rightArrow.addEventListener('click', () => {
-  collectionInner.scrollLeft += scrollStep;
 });
