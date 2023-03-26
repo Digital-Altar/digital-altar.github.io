@@ -34,7 +34,6 @@
     <footer>{% include footer.html %}</footer>
   </div>
 
-
   {% if collection %}
     {% assign tezoslist = site.data.tezos | sort: 'sequence' %}
     {% assign ethlist = site.data.ethereum | sort: 'sequence' %}
@@ -52,7 +51,6 @@
       ];
     </script>
     <script src="{{ '/assets/js/tokens.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/lazy.js' | relative_url }}"></script>
   {% endif %}
 </body>
 </html>

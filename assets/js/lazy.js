@@ -31,11 +31,10 @@ function observeImages() {
   observer.observe(document.body, { childList: true, subtree: true });
 }
 
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", async function(event) {
   // Call tezosTokens() and wait for it to complete before calling ethTokens()
-  tezosTokens().then(() => {
-    ethTokens();
-  });
+  await tezosTokens();
+  await ethTokens();
 
   if (supportsLazyLoading()) {
     observeImages();
