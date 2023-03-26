@@ -464,7 +464,7 @@ h3 {
   text-shadow: 1px 1px 1px teal;
 }
 p {
-  font-size: 100%;
+  font-size: 120%;
   margin: 10px auto auto auto;
   color: white;
   text-shadow: 1px 1px 1px #000000;
@@ -491,6 +491,11 @@ nav {
   text-align: center;
   padding: 20px;
   display: inline-block;
+}
+@media (max-width: 700px){
+nav {
+  font-size: 80%;
+  }
 }
 ul.navigation {
   list-style: none;
@@ -559,17 +564,17 @@ main.home {
   max-width: 100%;
 }
 .nft p span {
-  background: rgba(255,255,255,.5);
+  background: rgba(0,0,0,.5);
   padding: 10px 20px;
   display: inline-block;
-  color: black;
+  color: white;
   text-shadow: none;
   letter-spacing: 1px;
-  font-size: small;
+  font-size: 60%;
 }
 .nft:hover span {
-  background: rgba(0,0,0,.7);
-  color: white;
+  background: rgba(255,255,255,.7);
+  color: black;
 }
 footer {
   padding: 20px;
