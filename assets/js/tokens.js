@@ -6,13 +6,8 @@ function tezosTokens() {
       .then(response => {
         // Get data for the token
         const tokenData = response.data[0];
-        console.log(tokenData);
-
         const name = tokenData.metadata.name;
-        console.log(name); // TELEVISION
-
         const image = tokenData.metadata.thumbnailUri;
-        console.log(image); // ipfs://QmXkCjzAYScJg3kGSjC8jasNBnt5SMSYazdsrthggjSHD3
 
         // Transform image URL
         const imageUrl = image.replace('ipfs://', 'https://ipfs.io/ipfs/');
@@ -22,9 +17,9 @@ function tezosTokens() {
 
         // Create HTML for image and name
         const html = `
-          <div class="nft tezos">
+          <div class="nft tezos token">
             <a href="${linkUrl}">
-              <img src="${imageUrl}" alt="${name}" />
+              <img src="${imageUrl}" alt="${name}" loading="lazy" />
               <p><span>${name}</span></p>
             </a>
           </div>
@@ -51,19 +46,14 @@ function ethTokens() {
       .then(response => {
         // Get data for the token
         const tokenData = response.data;
-        console.log(tokenData);
-
         const name = tokenData.data.name;
-        console.log(name); // CryptoKitties #3234090
-
         const image = tokenData.data.imageURI;
-        console.log(image);
 
         // Create HTML for image and name
         const html = `
-          <div class="nft ethereum">
+          <div class="nft ethereum token">
             <a href="https://looksrare.org/collections/${token.address}/${token.tokenId}">
-              <img src="${image}" alt="${name}" />
+              <img src="${image}" alt="${name}" loading="lazy" />
               <p><span>${name}</span></p>
             </a>
           </div>
@@ -81,10 +71,3 @@ function ethTokens() {
   // Return a promise that resolves when all promises in the array have resolved
   return Promise.all(promises);
 }
-
-document.addEventListener("DOMContentLoaded", function(event) {
-  // Call tezosTokens() and wait for it to complete before calling ethTokens()
-  tezosTokens().then(() => {
-    ethTokens();
-  });
-});
