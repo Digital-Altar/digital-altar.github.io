@@ -515,7 +515,7 @@ ul.navigation li a:hover {
 }
 main {
   background: url('../images/digitalaltar-background.png') top center;
-  background-size: fit;
+  background-size: cover;
   padding: 20px;
   clear: both;
   overflow: hidden;

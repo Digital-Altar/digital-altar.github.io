@@ -1,21 +1,3 @@
-function fetchWithRetry(url, retryCount = 3) {
-  return new Promise((resolve, reject) => {
-    const request = () => {
-      axios.get(url)
-        .then(response => resolve(response))
-        .catch(error => {
-          if (retryCount === 0) {
-            reject(error);
-          } else {
-            retryCount--;
-            setTimeout(request, 1000);
-          }
-        });
-    };
-    request();
-  });
-}
-
 function tezosTokens() {
   // Create an array of promises for each token
   const promises = tezos.map(token => {
