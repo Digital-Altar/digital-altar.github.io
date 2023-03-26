@@ -427,7 +427,7 @@ Here's where we begin the styling
 
 /* The Meat */
 body {
-  font-size: 100%;
+  font-size: 18px;
 	margin: 0;
 	padding: 0;
 	background: #000000;
@@ -436,7 +436,10 @@ body {
 	background: linear-gradient(120deg, rgba(183,45,253,1) 5%, rgba(248,58,207,1) 15%, rgba(34,193,195,1) 91%);
   font-family: 'Inconsolata', monospace;
 }
-.wrapper {
+@media (max-width: 700px) {
+  body {
+    font-size: 24px;
+  }
 }
 header {
   background: black;
@@ -536,6 +539,11 @@ main.home {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(calc(33% - 40px), 1fr));
   grid-gap: 20px;
+}
+@media (max-width: 700px) {
+  #collection {
+    grid-template-columns: repeat(auto-fill, minmax(calc(50% - 40px), 1fr));
+  }
 }
 .nft {
   margin: 0 auto 20px auto;
