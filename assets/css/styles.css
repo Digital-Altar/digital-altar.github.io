@@ -438,7 +438,7 @@ body {
 }
 @media (max-width: 700px) {
   body {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 header {
@@ -446,7 +446,7 @@ header {
   overflow: hidden;
 }
 h1 {
-  font-size: 300%;
+  font-size: 400%;
   text-shadow: 1px 1px 1px teal;
 }
 h1::first-letter {
@@ -454,12 +454,12 @@ h1::first-letter {
   margin: 10px auto auto auto;
 }
 h2 {
-  font-size: 200%;
+  font-size: 300%;
   margin: 10px auto auto auto;
   text-shadow: 1px 1px 1px teal;
 }
 h3 {
-  font-size: 150%;
+  font-size: 200%;
   margin: 10px auto auto auto;
   text-shadow: 1px 1px 1px teal;
 }
@@ -532,6 +532,14 @@ main {
 main.home {
   height: 100%;
 }
+main a {
+  color: turquoise;
+}
+main a:hover {
+  color: white;
+  background: rgba(0,0,0,.5);
+  text-decoration: none;
+}
 .content {
   background: linear-gradient(120deg, rgba(183,45,253,.5) 5%, rgba(248,58,207,.5) 15%, rgba(34,193,195,.5) 91%);
   padding: 20px;
@@ -539,6 +547,11 @@ main.home {
   max-width: 1000px;
   color: black;
   clear: both;
+}
+@media (max-width: 700px) {
+  .content {
+    background: linear-gradient(120deg, rgba(183,45,253,.7) 5%, rgba(248,58,207,.7) 15%, rgba(34,193,195,.7) 91%);
+  }
 }
 #collection {
   display: grid;
@@ -583,4 +596,29 @@ footer {
   width: 100%;
   font-size: small;
   letter-spacing: 1px;
+}
+ul.linklist {
+  margin: 20px auto;
+}
+ul.linklist li {
+  margin: 20px;
+}
+@media (max-width: 700px) {
+  ul.linklist li span {
+    margin-top: 5px;
+    display: block;
+  }
+}
+ul.linklist li a {
+  background: rgba(0,0,0,.5);
+  padding: 10px 20px;
+  display: inline-block;
+  color: white;
+  text-shadow: none;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+ul.linklist li:hover a {
+  background: rgba(255,255,255,.5);
+  color: black;
 }

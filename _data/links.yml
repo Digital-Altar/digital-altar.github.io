@@ -1,0 +1,31 @@
+# links.yml
+# List your links
+
+- name: Twitter @digital_altar
+  description: Follow me on Twitter
+  url: http://twitter.com/digital_altar
+
+- name: IG @digitalaltar
+  description: Follow me on Instagram 
+  url: https://www.instagram.com/digitalaltar/
+  
+- name: digitalaltar.eth
+  description: Find me on OpenSea, LooksRare, etc
+  url: #
+
+- name: digitalaltar.tez
+  description: Find me on Objkt, etc
+  url: #
+
+- name: Github @digitalaltar
+  description: Find me on Github
+  url: https://github.com/digitalaltar
+
+- name: Github Repository
+  description: This site is hosted by Github Pages, feel free to check out the repo
+  url: https://github.com/Digital-Altar/digital-altar.github.io
+
+- name: Lucky Star
+  description: A wonderful creative, I also contribute to their Github Pages site
+  url: https://luckystar.ai
+
