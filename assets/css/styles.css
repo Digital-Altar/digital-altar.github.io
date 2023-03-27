@@ -446,7 +446,7 @@ header {
   overflow: hidden;
 }
 h1 {
-  font-size: 400%;
+  font-size: 300%;
   text-shadow: 1px 1px 1px teal;
 }
 h1::first-letter {
@@ -454,17 +454,17 @@ h1::first-letter {
   margin: 10px auto auto auto;
 }
 h2 {
-  font-size: 300%;
-  margin: 10px auto auto auto;
-  text-shadow: 1px 1px 1px teal;
-}
-h3 {
   font-size: 200%;
   margin: 10px auto auto auto;
   text-shadow: 1px 1px 1px teal;
 }
+h3 {
+  font-size: 150%;
+  margin: 10px auto auto auto;
+  text-shadow: 1px 1px 1px teal;
+}
 p {
-  font-size: 120%;
+  font-size: 100%;
   margin: 10px auto auto auto;
   color: white;
   text-shadow: 1px 1px 1px #000000;
