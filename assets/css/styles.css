@@ -448,6 +448,7 @@ header {
 h1 {
   font-size: 400%;
   text-shadow: 1px 1px 1px teal;
+  max-width: 100%;
 }
 h1::first-letter {
   font-family: 'Old English Five';
