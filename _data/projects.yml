@@ -1,0 +1,32 @@
+# projects.yml
+# List your Projects
+
+- name: 'Digital Altars'
+  description: 'A contemporary art project that marries traditional notions of sacred spaces with modern digital interactivity and multimedia.'
+  url: 'https://altars.digitalaltar.com'
+  image_url: '/assets/images/digital-altars.jpg'
+
+- name: 'twoMouths.js'
+  description: 'A metaphorical digital piece, representing the concept of code-switching.'
+  url: 'https://twomouths.digitalaltar.com'
+  image_url: '/assets/images/twomouths.jpg'
+
+- name: 'Microaggressions'
+  description: 'An interactive digital art piece that explores the impact of seemingly innocuous words on our daily lives.'
+  url: 'https://microaggressions.digitalaltar.com'
+  image_url: '/assets/images/microaggressions.gif'
+
+- name: 'New Gods: The Ancestral Mosaic'
+  description: 'New Gods: The Ancestral Mosaic is a vivid tribute and exploration into the artist’s identity.'
+  url: 'https://newgods.digitalaltar.com'
+  image_url: '/assets/images/new-gods.jpg'
+
+- name: 'Herbology'
+  description: 'An experiment with ai, code, and tarot.'
+  url: 'https://herbology.digitalaltar.com'
+  image_url: '/assets/images/herbology.jpg'
+
+- name: 'Marigolds'
+  description: 'A first test launch exploration into fx(hash).'
+  url: 'https://www.fxhash.xyz/generative/26371'
+  image_url: '/assets/images/marigolds.jpg'
