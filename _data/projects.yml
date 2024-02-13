@@ -1,6 +1,11 @@
 # projects.yml
 # List your Projects
 
+- name: 'With Love & Code'
+  description: 'A collaboration between Digital Altar x Lucky Star, blending technology and emotion into visual art and music.'
+  url: 'https://wlac.digitalaltar.com'
+  image_url: '/assets/images/wlac.jpg'
+
 - name: 'Digital Altars'
   description: 'A contemporary art project that marries traditional notions of sacred spaces with modern digital interactivity and multimedia.'
   url: 'https://altars.digitalaltar.com'
