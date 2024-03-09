@@ -1,47 +1,22 @@
 ---
 layout: default
 title: Links
+permalink: /links
 ---
 
-<div class="breadcrumbs"><a href="/">Home</a> &gt; Follow Digital Altar</div>
 
-<h1>Links</h1>
-
-<h2>Social Media</h2>
-<p>Find me with the following platforms and handles:</p>
-
-{% assign social_links = site.data.social_links %}
-<ul class="linklist">
-	{% for social_link in social_links %}
-	  <li>
-	  	<a href="{{ social_link.url }}">{{ social_link.name }}</a>
-	  	<span>{{ social_link.description }}</span>
-	  </li>
-	{% endfor %}
-</ul>
-
-<h2>Web3</h2>
-<p>Find me with the following aliases:</p>
-
-{% assign web3_links = site.data.web3_links %}
-<ul class="linklist">
-	{% for web3_link in web3_links %}
-	  <li>
-	  	<a href="{{ web3_link.url }}">{{ web3_link.name }}</a>
-	  	<span>{{ web3_link.description }}</span>
-	  </li>
-	{% endfor %}
-</ul>
-
-<h2>Additional Links</h2>
-<p>Some resources and friends:</p>
-
-{% assign additional_links = site.data.additional_links %}
-<ul class="linklist">
-	{% for additional_link in additional_links %}
-	  <li>
-	  	<a href="{{ additional_link.url }}">{{ additional_link.name }}</a>
-	  	<span>{{ additional_link.description }}</span>
-	  </li>
-	{% endfor %}
-</ul>
+<div class="links">
+	<div class="links-image">
+	</div>
+	<div class="links-text">
+		{% for group in site.data.links.groups %}
+		  <h2><i class="{{ group.icon }}"></i> {{ group.name }}</h2>
+		  <p>{{ group.text }}</p>
+		  <ul class="ul-{{ group.icon }}">
+		    {% for link in group.links %}
+		      <li><a href="{{ link.url }}">{{ link.title }}</a> <span>{{ link.comment }}</span></li>
+		    {% endfor %}
+		  </ul>
+		{% endfor %}
+	</div>
+</div>

@@ -1,32 +1,19 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400&display=swap" rel="stylesheet">
-
-  {% if page.url == '/' %}{% assign home = true %}{% endif %}
-  {% if page.url contains "/collection" %}{% assign collection = true %}{% endif %}
-
-  {% if home %}
-    <title>{{ site.title }}</title>
-  {% else %}
-    <title>{{ page.title }} - {{ site.title }}</title>
-  {% endif %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Altar</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
-<body class="welcome">
-  <div class="wrapper">
-    <header>{% include header.html %}</header>
-    <main {% if home %}class="home"{% endif %}>
-      {% if page.content != '' %}
-        <section class="content">
-          {{ content }}
-        </section>
-      {% endif %}
+<body>
+    {% include header.html %}
+
+    <main>
+        {{ content }}
     </main>
-    <footer>{% include footer.html %}</footer>
-  </div>
+
+    {% include footer.html %}
+    <script src="{{ '/assets/js/footer.js' | relative_url }}"></script>
 </body>
 </html>

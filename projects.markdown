@@ -1,25 +1,31 @@
 ---
 layout: default
 title: Projects
+permalink: /projects
 ---
 
-<div class="breadcrumbs"><a href="/">Home</a> &gt; Digital Altar Projects</div>
+{% include projects.html %}
 
-<h1>Projects</h1>
-
-<p>The following explorations are available online:</p>
-
-{% assign projects_list = site.data.projects %}
-<div class="projects-list">
-	{% for project in projects_list %}
-	  <div class="project">
-	  	<a href="{{ project.url }}" target="_blank">
-	  		<img src="{{ project.image_url }}" alt="">
-	  		<div>
-	  			<h2 class="name">{{ project.name }}</h2>
-	  			<p class="description">{{ project.description }}</p>
-	  		</div>
-	  	</a>
-	  </div>
-	{% endfor %}
+<div class="instructions">
+  <p>Please select a plant</p>
 </div>
+
+{% for project in site.data.projects %}
+<div class="project-details" id="{{ project.id }}" style="display:none;" data-project-id="{{ project.id }}">
+  <div class="project-image">
+    <img src="{{ project.image }}" alt="{{ project.title }}">
+    <br />
+  </div>
+  <div class="project-info">
+    <h2>{{ project.title }}</h2>
+    {% if project.description %}<p class="project-description">{{ project.description }}</p>{% endif %}
+    {% if project.technology %}<p class="project-tech"><i class="gg-toolbox"></i> Technology used <span>{{ project.technology }}</span></p>{% endif %}
+    {% if project.github_repo %}<p class="project-repo"><i class="gg-list-tree"></i> Github Repo <a href="{{ project.github_repo }}"><span>{{ project.github_repo | remove: 'https://github.com' }}</span></a></p>{% endif %}
+    {% if project.features %}<p><i class="gg-moon"></i> Features <span>{{ project.features }}</span></p>{% endif %}
+    {% if project.url %}<p class="project-url"><a href="{{ project.url }}"><i class="gg-website"></i> Visit project website</a></p>{% endif %}
+  </div>
+</div>
+{% endfor %}
+
+{% comment %} Script to Show / Hide Project Details {% endcomment %}
+<script src="{{ '/assets/js/projects.js' | relative_url }}"></script>

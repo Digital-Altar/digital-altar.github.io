@@ -1,0 +1,36 @@
+groups:
+  - name: 'Social Media'
+    icon: 'gg-comment'
+    text: 'Find me with the following platforms and handles'
+    links:
+      - title: '@digitalaltar'
+        comment: 'Instagram'
+        url: 'https://www.instagram.com/digitalaltar/'
+      - title: '@digital_altar'
+        comment: 'Twitter / X'
+        url: 'https://twitter.com/digital_altar'
+      - title: '@digitalaltar'
+        comment: 'Github'
+        url: 'https://github.com/digitalaltar'
+
+  - name: 'Web3'
+    icon: 'gg-qr'
+    text: 'Find me with the following aliases'
+    links:
+      - title: 'digitalaltar.eth'
+        comment: 'ETH, OpenSea, LooksRare, etc'
+        url: '#'
+      - title: 'digitalaltar.tez'
+        comment: 'Tezos, Objkt, fx(hash), etc'
+        url: '#'
+
+  - name: 'Additional Links'
+    icon: 'gg-link'
+    text: 'Various destinations on the web'
+    links:
+      - title: 'Github Repository'
+        comment: 'This site is hosted by Github Pages'
+        url: 'https://github.com/Digital-Altar/digital-altar.github.io'
+      - title: 'Lucky Star'
+        comment: 'A wonderful creative & frequent collaborator'
+        url: 'https://luckystar.ai/'

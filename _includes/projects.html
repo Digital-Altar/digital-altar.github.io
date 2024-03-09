@@ -1,0 +1,8 @@
+<nav class="projects">
+  {% for project in site.data.projects %}
+    <a href="{{ project.path }}" class="project-link" data-project-id="{{ project.id }}">
+      <img src="{{ project.icon }}" alt="">
+      <span>{{ project.title }}</span>
+    </a>
+  {% endfor %}
+</nav>
