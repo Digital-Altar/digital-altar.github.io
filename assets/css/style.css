@@ -244,10 +244,16 @@ main p {
 .project-description {
     font-size: 1.5rem;
 }
+.project-repo {
+    max-width: 100%;
+}
 .project-repo a {
     color: lightgreen;
     letter-spacing: 0.1rem;
     text-decoration: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 .project-repo a:hover {
     color: white;
