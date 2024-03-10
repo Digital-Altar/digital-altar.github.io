@@ -245,10 +245,11 @@ main p {
     font-size: 1.5rem;
 }
 .project-repo {
+    max-width: 100%;
+    word-wrap: break-word;
 }
 .project-repo a {
     color: lightgreen;
-    letter-spacing: 0.1rem;
     text-decoration: none;
 }
 .project-repo a:hover {
@@ -322,15 +323,6 @@ p.project-url {
 .links ul.ul-gg-comment li span {
     display: inline-block;
     margin: 0;
-}
-@media (max-width: 768px){
-    .project-repo a {
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-        display: block;
-        max-width: 100%;
-    }
 }
 @media (min-width: 769px) { /* Adjust for desktop */
     main {
