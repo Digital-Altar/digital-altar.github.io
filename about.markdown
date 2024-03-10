@@ -15,7 +15,6 @@ permalink: /about
 		<p>But who am I beyond the screen? In the "real" world, I'm a partner, a friend to two feline souls, and a gardener whose hands, so accustomed to keyboards and cables, find solace in the earth. This juxtaposition of lives enriches me, lending depth to my digital creations.</p>
 		<p>This expedition into digital artistry is more than a career; it's a quest for meaning in the pixelated shadows of our existence. By fusing technical skill with a visionary's eye, I aim to craft experiences that not only elevate the digital aesthetic but also invite the viewer into a dance of discovery and reflection.</p>
 		<p>In this digital age, I stand at the crossroads of technology and art, crafting not just websites, but gateways to worlds unseen, experiences unfelt. Join me on this journey, and let's redefine the essence of the digital experience together.</p>
-		<p>&nbsp;</p>
 		<p>Thank you for visiting my site and taking the time to learn more.</p>
 		<p class="signature"><img src="{{ '/assets/images/signature.png' | relative_url }}"></p>
 	</div>

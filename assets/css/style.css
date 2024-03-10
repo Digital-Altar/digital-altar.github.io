@@ -240,6 +240,7 @@ p.project-url a {
     display: inline-block;
     text-shadow: none;
     font-size: 1.25rem;
+    line-height: 1.5rem;
 }
 p.project-url a:hover {
     color: black;
@@ -286,9 +287,15 @@ p.project-url {
     background: rgba(0,0,0,0.5);
     padding: 20px 50px;
 }
+.about .about-image {
+    text-align: center;
+}
 .about .about-image img {
-    max-width: 100%;
+    max-width: 80%;
     border-radius: 50%;
+}
+.about p {
+    padding: 0 4% 1% 4%;   
 }
 .signature {
     float: right;
@@ -353,22 +360,22 @@ p.project-url {
     .about, .links {
         grid-template-columns: 1fr 2fr; /* Adjust the ratio between image and info columns as needed */    
     }
-    p.project-url {
-        padding: 0 0 0 50px;
-    }
     .copyright span {
         display: inline-block;
     }
     .about .about-image {
         padding: 5rem 5rem 0 0;
     }
+    .about .about-image img {
+        max-width: 100%;
+    }
+    .about p {
+        padding: 0 4% 1% 0;   
+    }
 }
 @media (min-width: 1200px) {
     .project-info {
         padding-right: 5rem;
-    }
-    p.project-url {
-        padding: 0 0 0 70px;
     }
     .links ul li span {
         display: inline-block;
