@@ -6,8 +6,8 @@
   url: 'https://wlac.digitalaltar.com/'
   icon: '/assets/images/icon-hydrangea.png'
   image: '/assets/images/project-wlac.gif'
-  description: 'A collaboration between Digital Altar x Lucky Star, bridging technology and emotion for a unique blend of art and music.'
-  technology: 'javascript, p5.js'
+  description: 'A collaboration between Digital Altar x Lucky Star, bridging together technology and emotion for a visceral blend of code, art, and music.'
+  technology: 'ai, javascript, p5.js'
   github_repo: 'https://github.com/digitalaltar/wlac'
   features: 'generative'
 
@@ -18,7 +18,7 @@
   icon: '/assets/images/icon-sapling.png'
   image: '/assets/images/project-digital-altars.jpg'
   description: 'A contemporary art project that marries traditional notions of sacred spaces with modern digital interactivity and multimedia.'
-  technology: 'javascript, p5.js'
+  technology: 'ai, javascript, p5.js'
   github_repo: 'https://github.com/digitalaltar/digital-altars'
   features: 'generative, interactive, VR compatible'
 
@@ -28,8 +28,8 @@
   url: 'https://twomouths.digitalaltar.com'
   icon: '/assets/images/icon-poppy.png'
   image: '/assets/images/project-twomouths.jpg'
-  description: 'A metaphorical digital piece, representing the concept of code-switching.'
-  technology: 'javascript, HTML5 Canvas API'
+  description: 'A metaphorical piece that captures the essence of code-switching, visualizing the fluid transition between different cultural and linguistic expressions.'
+  technology: 'ai, javascript, HTML5 Canvas API'
   github_repo: 'https://github.com/digitalaltar/twomouths'
   features: 'interactive'
 
@@ -51,7 +51,7 @@
   icon: '/assets/images/icon-sunflower.png'
   image: '/assets/images/project-newgods.jpg'
   description: "A vivid tribute and exploration into the artist's identity; available on the Tezos blockchain."
-  technology: 'stability.ai, procreate, tezos'
+  technology: 'ai, procreate, tezos'
   github_repo: 'https://github.com/digitalaltar/new-gods'
   features: 'video, digital collectible'
 
@@ -61,10 +61,10 @@
   url: 'https://herbology.digitalaltar.com'
   icon: '/assets/images/icon-lavender.png'
   image: '/assets/images/project-herbology.jpg'
-  description: 'A creative experiment with ai and code, exploring plant and tarot relationships.'
-  technology: 'stability.ai, javascript, css'
+  description: 'A novel experiment with AI and code, exploring the intriguing intersections between the botanical world and tarot symbolism.'
+  technology: 'ai, javascript, css'
   github_repo: 'https://github.com/digitalaltar/herbology'
-  features: 'tarot-inspired'
+  features: 'interactive'
 
 - id: 'marigolds'
   title: 'Marigolds'
@@ -73,6 +73,6 @@
   icon: '/assets/images/icon-marigold.png'
   image: '/assets/images/project-marigolds.jpg'
   description: 'A first test launch exploration into fx(hash); available on the Tezos blockchain.'
-  technology: 'javascript, fxhash, tezos'
+  technology: 'ai, javascript, fxhash, tezos'
   github_repo: 'https://github.com/Digital-Altar/fxhash-marigolds'
   features: 'generative, digital collectible'
