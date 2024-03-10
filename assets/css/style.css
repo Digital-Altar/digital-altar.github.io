@@ -228,7 +228,7 @@ main p {
     display: block;
     margin-left: 30px;
 }
-.project-url a {
+p.project-url a {
     margin: 20px 0 50px 0;
     background: -webkit-linear-gradient(45deg, lightgreen, skyblue);
     background: linear-gradient(45deg, lightgreen, skyblue);
@@ -239,22 +239,26 @@ main p {
     display: inline-block;
     text-shadow: none;
 }
-.project-url a:hover {
+p.project-url a:hover {
     color: black;
     background: white;
 }
-.project-description {
+p.project-description {
     font-size: 1.5rem;
-    padding: 0;
+    padding: 0 3% 3% 3%;
+    clip-path: none;
 }
-.project-repo {
+p.project-repo {
     max-width: 100%;
 }
-.project-repo a {
+p.project-repo a {
     color: lightgreen;
     text-decoration: none;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow: none;
 }
-.project-repo a:hover {
+p.project-repo a:hover {
     color: white;
     text-decoration: underline;
 }
