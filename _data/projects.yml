@@ -1,5 +1,16 @@
 # Projects Data
 
+- id: 'guadalupe'
+  title: 'Tonantzin Guadalupe'
+  path: '/projects#guadalupe'
+  url: 'https://guadalupe.digitalaltar.com/'
+  icon: '/assets/images/icon-yellowrose.png'
+  image: '/assets/images/project-guadalupe.jpg'
+  description: 'A carefully crafted tribute to my Grandmother: this 3D artwork and environment is designed to share a sense of serenity and contemplation.'
+  technology: 'ai, javascript, multibrush, three.js'
+  github_repo: 'https://github.com/digitalaltar/guadalupe'
+  features: 'interactive, immersive web, VR compatible'
+
 - id: 'wlac'
   title: 'With Love & Code'
   path: '/projects#wlac'
