@@ -69,7 +69,7 @@
 - id: 'marigolds'
   title: 'Marigolds'
   path: '/projects#marigolds'
-  url: '/projects/#marigolds'
+  url: 'https://www.fxhash.xyz/generative/slug/marigolds'
   icon: '/assets/images/icon-marigold.png'
   image: '/assets/images/project-marigolds.jpg'
   description: 'A first test launch exploration into fx(hash); available on the Tezos blockchain.'

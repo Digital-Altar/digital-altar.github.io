@@ -1,3 +1,4 @@
+// Show or Hide Projects Details
 document.addEventListener('DOMContentLoaded', function() {
     function updateUIBasedOnHash() {
         const currentHash = window.location.hash.replace('#', '');
@@ -46,4 +47,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Also, update the UI on initial page load
     updateUIBasedOnHash();
+});
+
+// Create Previous and Next Buttons
+document.addEventListener('DOMContentLoaded', () => {
+  projects.forEach((project, index) => {
+    // Assuming each project detail is in a div with an id corresponding to the project id
+    let projectElement = document.getElementById(project.id);
+    if (!projectElement) return;
+
+    let prevButton, nextButton;
+
+    if (index > 0) {
+        prevButton = document.createElement('div');
+        prevButton.innerHTML = '<i class="gg-arrow-left-r"></i> Previous Project';
+        prevButton.className = 'prev-button';
+        prevButton.addEventListener('click', () => {
+        window.location.hash = projects[index - 1].id;
+    });
+        projectElement.appendChild(prevButton);
+    } else {
+        // Create and append an empty div for the "Previous" button placeholder
+        let prevPlaceholder = document.createElement('div');
+        prevPlaceholder.className = 'prev-button';
+        projectElement.appendChild(prevPlaceholder);
+    }
+
+    if (index < projects.length - 1) {
+        nextButton = document.createElement('div');
+        nextButton.innerHTML = 'Next Project <i class="gg-arrow-right-r"></i>';
+        nextButton.className = 'next-button';
+        nextButton.addEventListener('click', () => {
+        window.location.hash = projects[index + 1].id;
+    });
+        projectElement.appendChild(nextButton);
+    }
+  });
 });

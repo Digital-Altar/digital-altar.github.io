@@ -189,7 +189,7 @@ main p {
     display: grid; /* Switch to grid when active */
     grid-template-columns: 1fr; /* Single column by default */
     gap: 0;
-    margin: 2rem 0 0 0;
+    margin: 2rem 0 5rem 0;
     padding: 0 1rem; /* Add some padding around the content */
     color: white;
     border-radius: 30px;
@@ -342,6 +342,14 @@ p.project-url {
     display: inline-block;
     margin: 0;
 }
+.prev-button, .next-button {
+    text-align: center;
+    cursor: pointer;
+    margin: 1rem 0;
+}
+.prev-button:hover, .next-button:hover {
+    text-decoration: underline;
+}
 @media (min-width: 769px) { /* Adjust for desktop */
     main {
         padding: 2% 5%;
@@ -372,6 +380,9 @@ p.project-url {
     .about p {
         padding: 0 4% 1% 0;   
     }
+    .prev-button, .next-button {
+        margin: 3rem auto 0 auto;
+    }
 }
 @media (min-width: 1200px) {
     .project-info {
@@ -383,7 +394,8 @@ p.project-url {
     }
 }
 
-/* Icons */
+/* ICONS FROM CSS.GG */
+/* website */
 .gg-website {
     box-sizing: border-box;
     position: relative;
@@ -418,7 +430,7 @@ p.project-url {
     right: 2px;
     border-radius: 1px;
 }
-
+/* toolbox */
 .gg-toolbox {
     box-sizing: border-box;
     position: relative;
@@ -459,7 +471,7 @@ p.project-url {
     inset -4px 0 0;
     top: 4px;
 } 
-
+/* the moon */
  .gg-moon,
 .gg-moon::after {
     display: inline-block;
@@ -486,6 +498,7 @@ p.project-url {
     top: 8px;
     left: 2px;
 }
+/* list tree */
 .gg-list-tree {
     box-sizing: border-box;
     position: relative;
@@ -531,6 +544,7 @@ p.project-url {
 .gg-list-tree::after {
     bottom: 0;
 }
+/* comment */
 .gg-comment {
     box-sizing: border-box;
     position: relative;
@@ -568,7 +582,8 @@ p.project-url {
     box-shadow: 0 4px 0 0;
     left: 4px;
     top: 4px;
-} 
+}
+/* qr code */
 .gg-qr {
     transform: scale(var(--ggs,1));
 }
@@ -599,6 +614,7 @@ p.project-url {
     top: 2px;
     left: 2px;
 }
+/* link */
 .gg-link {
     box-sizing: border-box;
     position: relative;
@@ -634,7 +650,8 @@ p.project-url {
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
     right: -6px;
-} 
+}
+/* arrow up */
 .gg-arrow-up-r {
     box-sizing: border-box;
     position: relative;
@@ -667,5 +684,75 @@ p.project-url {
     width: 2px;
     height: 10px;
     left: 8px;
+    background: currentColor;
+}
+/* arrow right */
+.gg-arrow-right-r {
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border: 2px solid;
+    transform: scale(var(--ggs,1));
+    border-radius: 4px;
+    vertical-align: middle;
+}
+.gg-arrow-right-r::after,
+.gg-arrow-right-r::before {
+    content: "";
+    display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    right: 4px;
+    vertical-align: middle;
+}
+.gg-arrow-right-r::after {
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid;
+    border-right: 2px solid;
+    transform: rotate(45deg);
+    bottom: 6px;
+}
+.gg-arrow-right-r::before {
+    width: 10px;
+    height: 2px;
+    bottom: 8px;
+    background: currentColor;
+}
+/* arrow left */
+.gg-arrow-left-r {
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border: 2px solid;
+    transform: scale(var(--ggs,1));
+    border-radius: 4px;
+    vertical-align: middle;
+}
+.gg-arrow-left-r::after,
+.gg-arrow-left-r::before {
+    content: "";
+    display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    left: 4px;
+    vertical-align: middle;
+}
+.gg-arrow-left-r::after {
+    width: 6px;
+    height: 6px;
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+    transform: rotate(45deg);
+    bottom: 6px;
+}
+.gg-arrow-left-r::before {
+    width: 10px;
+    height: 2px;
+    bottom: 8px;
     background: currentColor;
 } 
