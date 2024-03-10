@@ -223,6 +223,7 @@ main p {
     border-radius: 5px;
     clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 10% 100%);
     max-width: 100%;
+    font-size: 1rem;
 }
 .project-info p span {
     display: block;
@@ -238,13 +239,14 @@ p.project-url a {
     text-decoration: none;
     display: inline-block;
     text-shadow: none;
+    font-size: 1.25rem;
 }
 p.project-url a:hover {
     color: black;
     background: white;
 }
 p.project-description {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     padding: 0 3% 3% 3%;
     clip-path: none;
 }
@@ -253,7 +255,6 @@ p.project-repo {
     overflow-wrap: break-word;
     word-wrap: break-word;
     overflow: none;
-    display: none;
 }
 p.project-repo a {
     color: lightgreen;
