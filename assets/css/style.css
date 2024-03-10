@@ -207,6 +207,7 @@ main p {
     vertical-align: top;
 }
 .project-info {
+    word-wrap: break-word;
 }
 .project-info h2 {
     font-size: 2.5rem;
@@ -221,6 +222,7 @@ main p {
     padding: 15px 50px;
     border-radius: 5px;
     clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 10% 100%);
+    max-width: 100%;
 }
 .project-info p span {
     display: block;
@@ -243,10 +245,10 @@ main p {
 }
 .project-description {
     font-size: 1.5rem;
+    padding: 0;
 }
 .project-repo {
     max-width: 100%;
-    word-wrap: break-word;
 }
 .project-repo a {
     color: lightgreen;
