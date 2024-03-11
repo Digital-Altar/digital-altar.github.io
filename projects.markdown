@@ -13,8 +13,7 @@ permalink: /projects
 {% for project in site.data.projects %}
   <div class="project-details" id="{{ project.id }}" style="display:none;">
     <div class="project-image">
-      <img src="{{ project.image }}" alt="{{ project.title }}">
-      <br />
+      <img src="{{ project.image }}" data-gif="{{ project.gif }}" alt="{{ project.title }}">
     </div>
     <div class="project-info">
       <h2>{{ project.title }}</h2>

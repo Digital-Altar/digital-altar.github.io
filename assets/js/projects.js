@@ -84,3 +84,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+// Load Images then Gifs
+window.addEventListener('load', function() {
+    document.querySelectorAll('.project-image img').forEach(img => {
+        const gifUrl = img.getAttribute('data-gif');
+
+        if (gifUrl) {
+            img.src = gifUrl;
+        }
+    });
+});
